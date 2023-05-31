@@ -34,8 +34,9 @@ class HomeController extends Controller
     public function CategoryProduct($categoryId){
         $sanPhamModels = new SanPhamModels();
         $producer = NhaSanXuatModels::get();
+        $idcate =  $categoryId;
         $categoryproduct = $sanPhamModels->getDiscountedProductsByCategoryId($categoryId);
-        return view("trangChu.Home.CategoryProducts",compact('categoryproduct', 'producer'));
+        return view("trangChu.Home.CategoryProducts",compact('categoryproduct', 'producer', 'idcate'));
     }
     public function ProductDetail($productId){
         $sanPhamModels = new SanPhamModels();

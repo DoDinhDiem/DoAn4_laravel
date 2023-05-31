@@ -60,6 +60,9 @@
     </div>
     <!-- end row -->
     @if ($order_list->count() > 0)
+    <div>
+        <h4>Đơn hàng mới đặt</h4>
+    </div>
     <table class="table table-centered w-100 dt-responsive nowrap">
         <thead class="table-light">
             <tr>

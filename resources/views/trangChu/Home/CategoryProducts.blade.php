@@ -60,7 +60,13 @@
                 <div class="breadcrumb-content">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li class="active">Shop Left Sidebar</li>
+                        <li class="active">
+                            @foreach ($categorys as $item)
+                                @if ($idcate == $item->id)
+                                    {{ $item->TenLoai }}
+                                @endif
+                            @endforeach
+                        </li>
                     </ul>
                 </div>
             </div>
